@@ -72,7 +72,7 @@
 
 ##### 6)Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
 
-`db.attendance.aggregate([
+ ``` db.attendance.aggregate([
   
   {$lookup:{
     
@@ -100,4 +100,4 @@ foreignField:'topic_id',
     {$match:{attended:'false',status:'pending',$and:[{date:{$gt:new Date('2020-10-15'),$lt:new Date('2020-10-31')}}]}}   
   
   
-  ]);`
+  ]); 
